@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root {
+  --ticket-height: 60px;
+  --color-pink: #f6339b;
+  --color-yellow: #fff45f;
+  --color-blue: #1b6bff;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: #F1F1F1;
+  font-family: 'Secular One', sans-serif;
+  background-image: linear-gradient(-225deg, #ff7bf8 0%, #fff45f 56%, #ffffff 100%);
+}
+
+#page-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+
+  width: 100%;
+  height: 100px;
+  
+  background-color: white;
+}
+
+.header-logo {
+ padding-left: 15px;
+}
+
+#header-img {
+  width: 100px;
+  height: 100px;
+}
+
+#nav-bar {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-bar__list {
+  display: flex;
+  margin: 0;
+
+  list-style: none;
+}
+
+.nav-bar__link {
+  display: list-item;
+  padding-left: 10px;
+  padding-right: 10px;
+ 
+  text-align: -webkit-match-parent;
+  color:  var(--color-pink);
+  font-family: 'Secular One', sans-serif;
+  text-decoration: none;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-top: 100px; 
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+.title__main {
+  font-family: 'Secular One', sans-serif;
+  font-size: 10vw;
+
+  color:  var(--color-pink);
+}
+
+#title input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+  border:  var(--color-pink);
+}
+
+#title input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+
+  border: 0;
+  background-color:  var(--color-pink);
+}
+
+.description {
+  display: flex;
+  font-size: 18px;
+}
+
+.description__container__icon {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+
+  justify-content: center;
+}
+
+.description__icon {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+
+  border-radius: 5px;
+}
+.description__text {
+  flex: 1;
+  padding: 20px;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+}
+
+.description__name {
+  color: var(--color-blue);
+
+  font-family: 'Secular One', sans-serif;
+  font-size: 22px;
+}
+
+.description__specification {
+  color: rgb(33, 31, 31);
+
+  font-family: 'Secular One', sans-serif;
+  font-size: 18px;
+}
+
+.section-prices {
+  width: 100%;
+  padding: 20px;
+}
+
+.section-prices .section-header {
+  margin-bottom: 30px;
+  padding: 1.5rem 1rem;
+
+  text-align: center;
+  
+  background-color: #FFF;
+  color: var(--color-pink);
+}
+
+.list-boxs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-boxs .card {
+  position: relative;
+
+  width: 32%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.list-boxs .card .head,
+.list-boxs .card .body {
+  background-color: #FFF;
+  padding: 1.5rem 1rem;
+}
+
+.list-boxs .card .head {
+  color: #555;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transform: translateY(30px);
+  border-bottom: 1px solid #F2F2F2;
+}
+.list-boxs .card:hover .head {
+  transform: translateY(0);
+}
+
+.list-boxs .card .ticket {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: var(--ticket-height);
+  color: #FFF;
+}
+
+.list-boxs .starter .ticket {
+  background-color: var(--color-blue);
+}
+.list-boxs .standard .ticket {
+  background-color: var(--color-pink);
+}
+.list-boxs .premium .ticket {
+  background-color: var(--color-yellow);
+}
+
+.list-boxs .card .body {
+  transform: translateY(-30px);
+}
+.list-boxs .card:hover .body {
+  transform: translateY(0);
+}
+
+.list-boxs .card p {
+  font-size: .95rem;
+  color: #555;
+  text-align: justify;
+}
+.list-boxs .card .btn {
+  margin-top: 2rem;
+  padding: .6rem 1rem;
+
+  outline: none;
+  font-size: .85rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  min-width: 160px;
+  border: 1px solid #555;
+  background-color: #555;
+  color: #333;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.list-boxs .card .btn:hover {
+  box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .15);
+}
+
+.list-boxs .starter .btn {
+  background: var(--color-blue);
+  border-color: var(--color-blue);
+}
+.list-boxs .standard .btn {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+}
+.list-boxs .premium .btn {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+}
+
+
+@media screen and (max-width: 750px) {
+  .list-boxs {
+    justify-content: space-around;
+  }
+  .list-boxs .card {
+    width: 45%;
+  }
+  .description {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .list-boxs {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+  .list-boxs .card {
+    width: 95%;
+  }
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+}
+
+.footer-list {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+}
+
+.footer-link {
+  display: list-item;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  text-align: -webkit-match-parent;
+  font-family: 'Secular One', sans-serif;
+  text-decoration: none;
+  
+  color: var(--color-pink);
+
+}
+
+span {
+  padding: 20px;
+  color: #555;
+}
+
+#how-it-works {
+  display: flex;
+  justify-content:center;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+
+  aspect-ratio: 16 / 9;
+}
